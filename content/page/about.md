@@ -11,8 +11,8 @@ aliases:
   - contact
 menu: -90
 ---
-
-
 Op dit moment is Zelfstandig Gezond nog zijn visie aan het ontwikkelen. We ‘bestaan’ nog niet. Wel denken wij ook nu graag met jou mee. Vertel ons wat wij voor jouw onderneming kunnen betekenen.
+
+
 
 Vertel het ons via [dit formulier ](https://docs.google.com/forms/d/e/1FAIpQLSdUqsaQJmRDSYaUDRcHg7OKOEUT5S1DTHh6Xo2SunUeMGrbHg/viewform?usp=sf_link "Link naar google formulier")of hieronder.
