@@ -29,7 +29,20 @@ collections:
         - { label: 'Title', name: 'title', widget: 'string' }
         - { label: 'Description', name: 'description', widget: 'string' }
         - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-        - { label: 'Slug', name: 'slug', widget: 'string' }
+        - { label: 'Status', name: 'status', widget: 'select', options: ['Published', 'Featured', 'Draft'], default: 'Published' }
         - { label: 'Tags', name: 'tags', widget: 'list' }
-        - { label: 'Categories', name: 'categories', widget: 'list' }
-        - { label: 'Body', name: 'body', widget: 'markdown' }
+        - label: 'Categories'
+          name: 'categories'
+          widget: 'list'
+          required: false
+          fields:
+            - label: 'Category'
+              name: 'category'
+              widget: 'relation'
+              collection: 'postCategories'
+              searchFields: ['title']
+              valueField: 'title'
+        - { label: 'Image'  , name: 'image', widget: image, required: false }
+        - { label: 'Inhoud', name: 'body', widget: 'markdown' }
+        - { label: 'Verborgen', name: 'hidden', widget: 'boolean', required: false }
+        - { label: 'Commentaar', name: 'comments', widget: 'boolean', required: false }
