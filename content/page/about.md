@@ -1,13 +1,14 @@
 ---
+license: CC BY-NC-ND
+lastmod: 2020-10-09
 title: About
 description: We zijn nog aan het ontwikkelen
 date: 2021-04-03T19:46:45.244Z
+menu/main/weight: -90
 aliases:
   - about-us
   - about-hugo
   - contact
-license: CC BY-NC-ND
-lastmod: 2020-10-09
 menu: -90
 ---
 
