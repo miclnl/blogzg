@@ -24,21 +24,23 @@ collections:
     delete: false
     create: true
     files:
-      - file: 'content/page/about.md'
+      - file: 'content/page/about'
         label: 'About'
         name: 'about'
         fields:
           - { label: 'Titel', name: 'title', widget: 'string' }
           - { label: 'Omschrijving', name: 'description', widget: 'string' }
           - { label: 'Publicatie datum', name: 'date', widget: 'datetime' }
+          - { label: 'Inhoud', name: 'body', widget: 'markdown' }
           - { label: 'Menu', name: 'menu', widget: 'number', default: -90, value_type: "int", min: -100, max: 100, step: 10 }
-      - file: 'content/page/privacy.md'
+      - file: 'content/page/privacy'
         label: 'Privacy'
         name: 'privacy'
         fields:
           - { label: 'Titel', name: 'title', widget: 'string' }
           - { label: 'Omschrijving', name: 'description', widget: 'string' }
           - { label: 'Publicatie datum', name: 'date', widget: 'datetime' }
+          - { label: 'Inhoud', name: 'body', widget: 'markdown' }
           - { label: 'Menu', name: 'menu', widget: 'number', default: -90, value_type: "int", min: -100, max: 100, step: 10 }
   - name: 'blog'
     label: 'Blog'
