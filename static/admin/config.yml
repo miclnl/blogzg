@@ -5,16 +5,16 @@
 media_folder: "static/img" # Folder where user uploaded files should go
 public_folder: "img"
 
-media_library:
-  name: uploadcare
-  config:
-    publicKey: a73a170cb5cdef662983
-    multiple: false
-    tabs: 'file camera url facebook gdrive'
-    effects: 'crop,rotate,enhance,grayscale'
-    imageShrink: '2000x2000'
-    previewStep: true
-    clearable: true
+# media_library:
+  # name: uploadcare
+  # config:
+    # publicKey: a73a170cb5cdef662983
+    # multiple: false
+    # tabs: 'file camera url facebook gdrive'
+    # effects: 'crop,rotate,enhance,grayscale'
+    # imageShrink: '2000x2000'
+    # previewStep: true
+    # clearable: true
 
 
 collections:
@@ -22,6 +22,7 @@ collections:
     label: 'Informatie'
     folder: 'content/page'
     delete: false
+    create: true
     files:
       - file: 'content/page/about.md'
         label: 'About'
@@ -30,14 +31,15 @@ collections:
           - { label: 'Titel', name: 'title', widget: 'string' }
           - { label: 'Omschrijving', name: 'description', widget: 'string' }
           - { label: 'Publicatie datum', name: 'date', widget: 'datetime' }
-          - label: 'Menu'
-            name: 'menu'
-            widget: 'number'
-            default: -90
-            value_type: "int"
-            min: -100
-            max: 100
-            step: 10
+          - { label: 'Menu', name: 'menu', widget: 'number', default: -90, value_type: "int", min: -100, max: 100, step: 10 }
+      - file: 'content/page/privacy.md'
+        label: 'Privacy'
+        name: 'privacy'
+        fields:
+          - { label: 'Titel', name: 'title', widget: 'string' }
+          - { label: 'Omschrijving', name: 'description', widget: 'string' }
+          - { label: 'Publicatie datum', name: 'date', widget: 'datetime' }
+          - { label: 'Menu', name: 'menu', widget: 'number', default: -90, value_type: "int", min: -100, max: 100, step: 10 }
   - name: 'blog'
     label: 'Blog'
     folder: 'content/post'
@@ -45,8 +47,6 @@ collections:
     path: '{{slug}}/index'
     media_folder: ''
     public_folder: ''
-    editor:
-        preview: true
     fields:
         - { label: 'Titel', name: 'title', widget: 'string' }
         - { label: 'Omschrijving', name: 'description', widget: 'string' }

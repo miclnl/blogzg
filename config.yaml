@@ -1,10 +1,10 @@
 baseURL: "/"
 languageCode: "nl-nl"
-title: "My New Hugo Site"
+title: 'Zelfstandig Gezond'
 theme: "stack"
 
 # Change it to your Disqus shortname before using
-disqusShortname: hugo-theme-stack
+disqusShortname: 
 
 # GA Tracking ID
 googleAnalytics:
@@ -29,20 +29,20 @@ params:
         customText:
 
     dateFormat:
-        published: Jan 02, 2006
-        lastUpdated: Jan 02, 2006 15:04 MST
+        published: Monday, 02 Jan 2006
+        lastUpdated: Monday, 02 Jan 2006 15:04
 
     sidebar:
-        emoji: 🍥
-        subtitle: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        emoji: 
+        subtitle: Gezond aan het werk!
         avatar:
             local: false
-            src: img/avatar.png
+            src: /img/logo_mini.svg
 
     article:
         math: false
         license:
-            enabled: true
+            enabled: false
             default: Licensed under CC BY-NC-SA 4.0
 
     comments:
