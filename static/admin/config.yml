@@ -30,13 +30,11 @@ collections:
       - { label: 'Omschrijving', name: 'description', widget: 'string' }
       - { label: 'Publicatie datum', name: 'date', widget: 'datetime' }
       - { label: 'Inhoud', name: 'body', widget: 'markdown' }
-      - label: 'Menu'
-        name: 'menu'
-        widget: 'object'
+      - name: 'menu'
+        widget: 'list'
         fields:
-          - label: 'main'
-            name: 'main'
-            widget: 'object'
+          - name: 'main'
+            widget: 'list'
             fields:
               - { label: 'Waar in het menu', name: 'weight', widget: 'number', default: -90, value_type: 'int', min: -100, max: 100, step: 10 }
               - { label: 'menuuser', name: 'pre', widget: 'hidden', default: 'user' }
