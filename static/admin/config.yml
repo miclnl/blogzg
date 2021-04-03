@@ -1,10 +1,20 @@
 ﻿backend:
   name: git-gateway
 
-media_folder: "static/img/uploads" # Folder where user uploaded files should go
-public_folder: "img/uploads"
+media_folder: "static/img" # Folder where user uploaded files should go
+public_folder: "img"
+
 media_library:
-    name: uploads
+  name: uploadcare
+  config:
+    publicKey: a73a170cb5cdef662983
+    multiple: false
+    tabs: 'file camera url facebook gdrive'
+    effects: 'crop,rotate,enhance,grayscale'
+    imageShrink: '2000x2000'
+    previewStep: true
+    clearable: true
+
 
 collections:
   - name: 'blog'
