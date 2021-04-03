@@ -30,7 +30,8 @@ collections:
       - { label: 'Omschrijving', name: 'description', widget: 'string' }
       - { label: 'Publicatie datum', name: 'date', widget: 'datetime' }
       - { label: 'Inhoud', name: 'body', widget: 'markdown' }
-      - { label: 'Menu', name: 'menu', widget: 'number', default: -90, value_type: 'int', min: -100, max: 100, step: 10 }
+      - { label: 'Menu', name: 'menu/main/weight', widget: 'number', default: -90, value_type: 'int', min: -100, max: 100, step: 10 }
+      - { label: 'menuuser', name: 'menu/main/pre', widget: 'hidden', default: 'user' }
   - name: 'blog'
     label: 'Blog'
     folder: 'content/post'
