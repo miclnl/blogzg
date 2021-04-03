@@ -21,28 +21,29 @@ collections:
   - name: 'info'
     label: 'Informatie'
     folder: 'content/page'
+    create: true
     delete: false
     files:
-      - file: 'content/page/about'
+      - file: 'content/page/about.md'
         label: 'About'
         name: 'about'
         fields:
           - { label: 'Titel', name: 'title', widget: 'string' }
-          - { label: Slug, name: slug, widget: hidden, default: 'about' }
+          - { label: 'Slug', name: 'slug', widget: 'hidden', default: 'about' }
           - { label: 'Omschrijving', name: 'description', widget: 'string' }
           - { label: 'Publicatie datum', name: 'date', widget: 'datetime' }
           - { label: 'Inhoud', name: 'body', widget: 'markdown' }
-          - { label: 'Menu', name: 'menu', widget: 'number', default: -90, value_type: 'int', min: -100, max: 100, step: 10 }
-      - file: 'content/page/privacy'
+          - { label: 'Menu', name: 'menu', widget: 'number' }
+      - file: 'content/page/privacy.md'
         label: 'Privacy'
         name: 'privacy'
         fields:
           - { label: 'Titel', name: 'title', widget: 'string' }
-          - { label: Slug, name: slug, widget: hidden, default: 'privacy' }
+          - { label: 'Slug', name: 'slug', widget: 'hidden', default: 'privacy' }
           - { label: 'Omschrijving', name: 'description', widget: 'string' }
           - { label: 'Publicatie datum', name: 'date', widget: 'datetime' }
           - { label: 'Inhoud', name: 'body', widget: 'markdown' }
-          - { label: 'Menu', name: 'menu', widget: 'number', default: -90, value_type: 'int', min: -100, max: 100, step: 10 }
+          - { label: 'Menu', name: 'menu', widget: 'number' }
   - name: 'blog'
     label: 'Blog'
     folder: 'content/post'
