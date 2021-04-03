@@ -6,4 +6,4 @@
     HUGO_THEME = "stack"
 
 [context.production]
-    command = "hugo --gc -b ${URL}"
+    command = "hugo --gc --minify -b ${URL}"
