@@ -18,20 +18,42 @@ media_library:
 
 
 collections:
+  - name: 'info'
+    label: 'Informatie'
+    folder: 'content/page'
+    delete: false
+    files:
+      - file: 'content/page/about.md'
+        label: 'About'
+        name: 'about'
+        fields:
+          - { label: 'Titel', name: 'title', widget: 'string' }
+          - { label: 'Omschrijving', name: 'description', widget: 'string' }
+          - { label: 'Publicatie datum', name: 'date', widget: 'datetime' }
+          - label: 'Menu'
+            name: 'menu'
+            widget: 'number'
+            default: -90
+            value_type: "int"
+            min: -100
+            max: 100
+            step: 10
   - name: 'blog'
     label: 'Blog'
     folder: 'content/post'
     create: true
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    path: '{{slug}}/index'
+    media_folder: ''
+    public_folder: ''
     editor:
-        preview: false
+        preview: true
     fields:
-        - { label: 'Title', name: 'title', widget: 'string' }
-        - { label: 'Description', name: 'description', widget: 'string' }
-        - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+        - { label: 'Titel', name: 'title', widget: 'string' }
+        - { label: 'Omschrijving', name: 'description', widget: 'string' }
+        - { label: 'Publicatie datum', name: 'date', widget: 'datetime' }
         - { label: 'Status', name: 'status', widget: 'select', options: ['Published', 'Featured', 'Draft'], default: 'Published' }
         - { label: 'Tags', name: 'tags', widget: 'list' }
-        - label: 'Categories'
+        - label: 'Categoriën'
           name: 'categories'
           widget: 'list'
           required: false
@@ -45,4 +67,4 @@ collections:
         - { label: 'Image'  , name: 'image', widget: image, required: false }
         - { label: 'Inhoud', name: 'body', widget: 'markdown' }
         - { label: 'Verborgen', name: 'hidden', widget: 'boolean', required: false }
-        - { label: 'Commentaar', name: 'comments', widget: 'boolean', required: false }
+        - { label: 'Commentaar', name: 'comments', widget: 'boolean', default: true, required: false }
