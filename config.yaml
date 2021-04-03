@@ -1,7 +1,7 @@
 baseURL: "/"
 languageCode: "nl-nl"
 title: "My New Hugo Site"
-theme: "hugo-theme-stack"
+theme: "stack"
 
 # Change it to your Disqus shortname before using
 disqusShortname: hugo-theme-stack
