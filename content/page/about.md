@@ -4,12 +4,6 @@ lastmod: 2020-10-09
 title: About
 description: We zijn nog aan het ontwikkelen
 date: 2021-04-04T19:13:28.740Z
-menu/main/weight: -90
-aliases:
-  - about-us
-  - about-hugo
-  - contact
-menu: -90
 ---
 Op dit moment is Zelfstandig Gezond nog zijn visie aan het ontwikkelen. We ‘bestaan’ nog niet. Wel denken wij ook nu graag met jou mee. Vertel ons wat wij voor jouw onderneming kunnen betekenen.
 
