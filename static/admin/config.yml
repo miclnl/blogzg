@@ -36,7 +36,7 @@ collections:
             widget: 'object'
             fields:
               - { label: 'Waar in het menu', name: 'weight', widget: 'number', default: -90, value_type: 'int', min: -100, max: 100, step: 10 }
-              - { name: 'pre', widget: 'hidden', default: 'user' }
+              - { label: 'Icoon (Font Awesome)', name: 'pre', widget: 'string', default: 'user' }
   - name: 'blog'
     label: 'Blog'
     folder: 'content/post'
