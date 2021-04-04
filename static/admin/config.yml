@@ -23,21 +23,20 @@ collections:
     folder: 'content/page'
     delete: false
     create: true
-    path: '{{slug}}'
+    path: '{{title}}'
     fields:
       - { label: 'Titel', name: 'title', widget: 'string' }
-      - { label: 'Slug', name: 'slug', widget: 'hidden', default: 'about' }
       - { label: 'Omschrijving', name: 'description', widget: 'string' }
       - { label: 'Publicatie datum', name: 'date', widget: 'datetime' }
       - { label: 'Inhoud', name: 'body', widget: 'markdown' }
       - name: 'menu'
-        widget: 'list'
+        widget: 'object'
         fields:
           - name: 'main'
-            widget: 'list'
+            widget: 'object'
             fields:
               - { label: 'Waar in het menu', name: 'weight', widget: 'number', default: -90, value_type: 'int', min: -100, max: 100, step: 10 }
-              - { label: 'menuuser', name: 'pre', widget: 'hidden', default: 'user' }
+              - { name: 'pre', widget: 'hidden', default: 'user' }
   - name: 'blog'
     label: 'Blog'
     folder: 'content/post'
