@@ -28,6 +28,7 @@ collections:
       - { label: 'Titel', name: 'title', widget: 'string' }
       - { label: 'Omschrijving', name: 'description', widget: 'string' }
       - { label: 'Publicatie datum', name: 'date', widget: 'datetime' }
+      - { label: 'Laatst aangepast', name 'lastmod', widget: 'datetime' }
       - { label: 'Inhoud', name: 'body', widget: 'markdown' }
       - name: 'menu'
         widget: 'object'
@@ -45,10 +46,13 @@ collections:
     media_folder: ''
     public_folder: ''
     fields:
+        - { label: 'Status', name: 'status', widget: 'select', options: ['Published', 'Featured', 'Draft'], default: 'Published' }
+        - { label: 'Verborgen', name: 'hidden', widget: 'boolean', required: false }
         - { label: 'Titel', name: 'title', widget: 'string' }
         - { label: 'Omschrijving', name: 'description', widget: 'string' }
         - { label: 'Publicatie datum', name: 'date', widget: 'datetime' }
-        - { label: 'Status', name: 'status', widget: 'select', options: ['Published', 'Featured', 'Draft'], default: 'Published' }
+        - { label: 'Laatst aangepast', name 'lastmod', widget: 'datetime' }
+        - { label: 'Auteur', name: 'author', widget: 'string' }
         - { label: 'Tags', name: 'tags', widget: 'list' }
         - label: 'Categoriën'
           name: 'categories'
@@ -63,5 +67,8 @@ collections:
               valueField: 'title'
         - { label: 'Image'  , name: 'image', widget: image, required: false }
         - { label: 'Inhoud', name: 'body', widget: 'markdown' }
-        - { label: 'Verborgen', name: 'hidden', widget: 'boolean', required: false }
+        - label: 'Opties'
+          name: 'options'
+          widget: 'object'
+          fields:
         - { label: 'Commentaar', name: 'comments', widget: 'boolean', default: true, required: false }
