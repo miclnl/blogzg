@@ -4,6 +4,12 @@
 
 media_folder: "static/img" # Folder where user uploaded files should go
 public_folder: "img"
+publish_mode: editorial_workflow
+
+slug:
+  encoding: "ascii"
+  clean_accents: true
+  sanitize_replacement: "_"
 
 # media_library:
   # name: uploadcare
@@ -26,6 +32,7 @@ collections:
     path: '{{title}}'
     fields:
       - { label: 'Titel', name: 'title', widget: 'string' }
+      - { label: 'Slug', name: 'slug', widget: 'string', default: '{{slug}}' }
       - { label: 'Omschrijving', name: 'description', widget: 'string' }
       - { label: 'Publicatie datum', name: 'date', widget: 'datetime' }
       - { label: 'Laatst aangepast', name 'lastmod', widget: 'datetime' }
@@ -49,6 +56,8 @@ collections:
         - { label: 'Status', name: 'status', widget: 'select', options: ['Published', 'Featured', 'Draft'], default: 'Published' }
         - { label: 'Verborgen', name: 'hidden', widget: 'boolean', required: false }
         - { label: 'Titel', name: 'title', widget: 'string' }
+        - { label: 'Slug', name: 'slug', widget: 'string', default: '{{slug}}' }
+        - { label: 'Keywords', name: 'keywords', widget: 'list' }
         - { label: 'Omschrijving', name: 'description', widget: 'string' }
         - { label: 'Publicatie datum', name: 'date', widget: 'datetime' }
         - { label: 'Laatst aangepast', name 'lastmod', widget: 'datetime' }
@@ -71,4 +80,4 @@ collections:
           name: 'options'
           widget: 'object'
           fields:
-        - { label: 'Commentaar', name: 'comments', widget: 'boolean', default: true, required: false }
+          - { label: 'Commentaar', name: 'comments', widget: 'boolean', default: true }

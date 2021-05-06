@@ -23,6 +23,7 @@ params:
     featuredImageField: image
     rssFullContent: true
     favicon:
+    robots: false
 
     footer:
         since: 2020
@@ -78,10 +79,12 @@ params:
 
             # Available values: summary, summary_large_image
             card: summary_large_image
+        facebook:
+            site:
 
     defaultImage:
         opengraph:
-            enabled: false
+            enabled: true
             local: false
             src:
 
